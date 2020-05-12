@@ -1,0 +1,255 @@
+@import "../../css/mixin.scss";
+
+.k-button {
+  position: relative;
+  display: inline-block;
+  -webkit-appearance: none;
+  padding: 12px 20px;
+  margin: 0;
+  line-height: 1;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  background: $default-color;
+  border: 1px solid #d9d9d9;
+  box-sizing: border-box;
+  color: $text-color;
+  outline: none;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: all .3s cubic-bezier(.645,.045,.355,1);
+  &:hover {
+    border-color: $theme-color;
+    color: $theme-color;
+  }
+  &+.k-button {
+    margin-left: 10px;
+  }
+}
+
+.k-button.is-round {
+  border-radius: 40px;
+}
+
+.k-button--primary {
+  background: $theme-color;
+  border-color: $theme-color;
+  color: #fff;
+  &.is-plain {
+    color: $theme-color;
+    background: $theme-lightBg-color;
+    border-color: $theme-lightBd-color;
+    &:hover {
+      background: $theme-color;
+      border-color: $theme-color;
+      color: $default-color;
+      opacity: 1;
+    }
+  }
+  &:hover {
+    border-color: $theme-color;
+    color: $default-color;
+    opacity: .8;
+  }
+}
+
+.k-button--success {
+  background: $success-color;
+  border-color: $success-color;
+  color: #fff;
+  &.is-plain {
+    color: $success-color;
+    background: $success-lightBg-color;
+    border-color: $success-lightBd-color;
+    &:hover {
+      background: $success-color;
+      border-color: $success-color;
+      color: $default-color;
+      opacity: 1;
+    }
+  }
+  &:hover {
+    border-color: $success-color;
+    color: $default-color;
+    opacity: .8;
+  }
+}
+
+.k-button--warning {
+  background: $warning-color;
+  border-color: $warning-color;
+  color: #fff;
+  &.is-plain {
+    color: $warning-color;
+    background: $warning-lightBg-color;
+    border-color: $warning-lightBd-color;
+    &:hover {
+      background: $warning-color;
+      border-color: $warning-color;
+      color: $default-color;
+      opacity: 1;
+    }
+  }
+  &:hover {
+    border-color: $warning-color;
+    color: $default-color;
+    opacity: .8;
+  }
+}
+
+.k-button--info {
+  background: $info-color;
+  border-color: $info-color;
+  color: #fff;
+  &.is-plain {
+    color: $info-color;
+    background: $info-lightBg-color;
+    border-color: $info-lightBd-color;
+    &:hover {
+      background: $info-color;
+      border-color: $info-color;
+      color: $default-color;
+      opacity: 1;
+    }
+  }
+  &:hover {
+    border-color: $info-color;
+    color: $default-color;
+    opacity: .8;
+  }
+}
+
+.k-button--danger {
+  background: $danger-color;
+  border-color: $danger-color;
+  color: #fff;
+  &.is-plain {
+    color: $danger-color;
+    background: $danger-lightBg-color;
+    border-color: $danger-lightBd-color;
+    &:hover {
+      background: $danger-color;
+      border-color: $danger-color;
+      color: $default-color;
+      opacity: 1;
+    }
+  }
+  &:hover {
+    border-color: $danger-color;
+    color: $default-color;
+    opacity: .8;
+  }
+}
+
+.k-button.is-disabled {
+  cursor: not-allowed;
+  opacity: .5;
+  &:hover {
+    background: $default-color;
+    border: 1px solid #d9d9d9;
+    color: $text-color;
+  }
+}
+
+.k-button--primary.is-disabled {
+  cursor: not-allowed;
+  opacity: .5;
+  &:hover {
+    background: $theme-color;
+    border-color: $theme-color;
+    color: #fff;
+  }
+}
+
+.k-button--success.is-disabled {
+  cursor: not-allowed;
+  opacity: .5;
+  &:hover {
+    background: $success-color;
+    border-color: $success-color;
+    color: #fff;
+  }
+}
+
+.k-button--info.is-disabled {
+  cursor: not-allowed;
+  opacity: .5;
+  &:hover {
+    background: $info-color;
+    border-color: $info-color;
+    color: #fff;
+  }
+}
+
+.k-button--warning.is-disabled {
+  cursor: not-allowed;
+  opacity: .5;
+  &:hover {
+    background: $warning-color;
+    border-color: $warning-color;
+    color: #fff;
+  }
+}
+
+.k-button--danger.is-disabled {
+  cursor: not-allowed;
+  opacity: .5;
+  &:hover {
+    background: $danger-color;
+    border-color: $danger-color;
+    color: #fff;
+  }
+}
+
+.k-button--primary.is-plain.is-disabled {
+  cursor: not-allowed;
+  opacity: .5;
+  &:hover {
+    color: $theme-color;
+    background: $theme-lightBg-color;
+    border-color: $theme-lightBd-color;
+  }
+}
+
+.k-button--success.is-plain.is-disabled {
+  cursor: not-allowed;
+  opacity: .5;
+  &:hover {
+    color: $success-color;
+    background: $success-lightBg-color;
+    border-color: $success-lightBd-color;
+  }
+}
+
+.k-button--info.is-plain.is-disabled {
+  cursor: not-allowed;
+  opacity: .5;
+  &:hover {
+    color: $info-color;
+    background: $info-lightBg-color;
+    border-color: $info-lightBd-color;
+  }
+}
+
+.k-button--warning.is-plain.is-disabled {
+  cursor: not-allowed;
+  opacity: .5;
+  &:hover {
+    color: $warning-color;
+    background: $warning-lightBg-color;
+    border-color: $warning-lightBd-color;
+  }
+}
+
+.k-button--danger.is-plain.is-disabled {
+  cursor: not-allowed;
+  opacity: .5;
+  &:hover {
+    color: $danger-color;
+    background: $danger-lightBg-color;
+    border-color: $danger-lightBd-color;
+  }
+}
+
+

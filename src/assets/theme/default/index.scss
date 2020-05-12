@@ -1,0 +1,7 @@
+@import "../../css/mixin.scss";
+
+html, body {
+  @include app-font;
+}
+
+@import './button.scss';

@@ -4,7 +4,9 @@
   position: relative;
   display: inline-block;
   -webkit-appearance: none;
-  padding: 12px 20px;
+  //padding: 12px 20px;
+  padding: 0px 18px;
+  height: 40px;
   margin: 0;
   line-height: 1;
   font-weight: 400;
@@ -19,17 +21,35 @@
   border-radius: 4px;
   font-size: 14px;
   transition: all .3s cubic-bezier(.645,.045,.355,1);
-  &:hover {
-    border-color: $theme-color;
-    color: $theme-color;
-  }
   &+.k-button {
     margin-left: 10px;
   }
+  i {
+    font-size: 18px;
+    vertical-align: -.1em;
+  }
 }
+
 
 .k-button.is-round {
   border-radius: 40px;
+}
+
+
+.k-button--default {
+  &.is-plain {
+    &:hover {
+      border-color: $theme-color;
+      color: $theme-color;
+      background: $default-color;
+    }
+  }
+  &:hover {
+    background: $theme-lightBg-color;
+    border-color: $theme-lightBd-color;
+    color: $theme-color;
+    opacity: 1;
+  }
 }
 
 .k-button--primary {
@@ -142,7 +162,7 @@
   }
 }
 
-.k-button.is-disabled {
+.k-button--default.is-disabled {
   cursor: not-allowed;
   opacity: .5;
   &:hover {
@@ -252,4 +272,33 @@
   }
 }
 
+.k-button--medium {
+  height: 36px;
+  padding: 0px 18px;
+  font-size: 14px;
+  border-radius: 4px;
+  i {
+    font-size: 18px;
+  }
+}
+
+.k-button--small {
+  height: 32px;
+  padding: 0px 15px;
+  font-size: 12px;
+  border-radius: 3px;
+  i {
+    font-size: 16px;
+  }
+}
+
+.k-button--mini {
+  height: 28px;
+  padding: 0px 15px;
+  font-size: 12px;
+  border-radius: 3px;
+  i {
+    font-size: 14px;
+  }
+}
 

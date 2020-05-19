@@ -10,6 +10,7 @@ import icon from '@/views/right/icon'
 
 // Form 表单
 import input from '@/views/right/input'
+import textarea from '@/views/right/textarea'
 import radio from '@/views/right/radio'
 import checkbox from '@/views/right/checkbox'
 
@@ -36,6 +37,11 @@ export default new Router({
 					path: '/input',
 					name: 'input',
 					component: input
+				},
+				{
+					path: '/textarea',
+					name: 'textarea',
+					component: textarea
 				},
 				{
 					path: '/radio',

@@ -45,7 +45,8 @@
                         list: [
                         	{name: 'Input', path: 'input'},
                         	{name: 'Radio', path: 'radio'},
-                        	{name: 'Checkbox', path: 'Checkbox'}
+                        	{name: 'Checkbox', path: 'checkbox'},
+                        	{name: 'Textarea', path: 'textarea'},
                         ]
                     },
                     {
@@ -154,6 +155,8 @@
             overflow-y: auto;
             scroll-behavior:smooth;
             flex: 1;
+            height: 100%;
+            box-sizing: border-box;
         }
     }
 }

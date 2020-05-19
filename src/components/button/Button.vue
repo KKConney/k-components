@@ -1,9 +1,17 @@
 <template>
   <button
           type="button"
-          class="k-button" :class="[type? 'k-button--' + type : '', {'is-plain': plain}, {'is-round': round}, {'is-disabled': disabled}]"
+          class="k-button"
+          :class="[
+              type? 'k-button--' + type : 'k-button--default',
+              {'is-plain': plain},
+              {'is-round': round},
+              {'is-disabled': disabled},
+              'k-button--' + size
+            ]"
           @click="handleBtnClick">
-    <slot></slot>
+    <i :class="icon" v-if="icon"></i>
+    <span :style="{marginLeft: (icon? '5px' : '')}" v-if="$slots.default"><slot></slot></span>
   </button>
 </template>
 
@@ -15,6 +23,8 @@
       disabled: Boolean,
       plain: Boolean,
       round: Boolean,
+      size: String,
+      icon: String
     },
     data() {
       return {

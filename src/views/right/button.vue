@@ -1,8 +1,9 @@
 <template>
     <div>
+        <h2>Button 按钮</h2>
         <h4>基础用法</h4>
         <div class="row">
-            <k-button>默认按钮</k-button>
+            <k-button @click="handleClick">默认按钮</k-button>
             <k-button type="primary">主要按钮</k-button>
             <k-button type="success">成功按钮</k-button>
             <k-button type="info">信息按钮</k-button>
@@ -51,6 +52,33 @@
             <k-button type="warning" plain disabled>警告按钮</k-button>
             <k-button type="danger" plain disabled>危险按钮</k-button>
         </div>
+
+        <h4>图标按钮</h4>
+        <div class="row">
+            <k-button type="primary" icon="k-icon-add"></k-button>
+            <k-button type="primary" icon="k-icon-accessory"></k-button>
+            <k-button type="primary" icon="k-icon-trash"></k-button>
+            <k-button type="primary" icon="k-icon-search">主要按钮</k-button>
+        </div>
+
+        <h4>不同尺寸</h4>
+        <div class="row">
+            <k-button>默认按钮</k-button>
+            <k-button size="medium" icon="k-icon-trash">中等按钮</k-button>
+            <k-button size="small" icon="k-icon-trash">小型按钮</k-button>
+            <k-button size="mini" icon="k-icon-trash">超小按钮</k-button>
+        </div>
+        <div class="row">
+            <k-button round>默认按钮</k-button>
+            <k-button round size="medium">中等按钮</k-button>
+            <k-button round size="small">小型按钮</k-button>
+            <k-button round size="mini">超小按钮</k-button>
+        </div>
+        <div class="row">
+            <k-button type="primary" icon="k-icon-add" size="medium"></k-button>
+            <k-button type="primary" icon="k-icon-add" size="small"></k-button>
+            <k-button type="primary" icon="k-icon-add" size="mini"></k-button>
+        </div>
     </div>
 </template>
 
@@ -66,7 +94,9 @@ export default {
         }
     },
     methods: {
-
+	    handleClick(e) {
+	    	alert(e)
+        }
     },
 
 }

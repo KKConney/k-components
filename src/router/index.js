@@ -5,14 +5,16 @@ import Router from 'vue-router'
 import layout from '@/views/layout'
 
 // 通用
-import button from '@/views/right/button'
-import icon from '@/views/right/icon'
+import Button from '@/views/right/button'
+import Icon from '@/views/right/icon'
 
 // Form 表单
-import input from '@/views/right/input'
-import textarea from '@/views/right/textarea'
-import radio from '@/views/right/radio'
-import checkbox from '@/views/right/checkbox'
+import Input from '@/views/right/input'
+import Textarea from '@/views/right/textarea'
+import Radio from '@/views/right/radio'
+import Checkbox from '@/views/right/checkbox'
+import Select from '@/views/right/select'
+import Switch from '@/views/right/switch'
 
 Vue.use(Router)
 
@@ -26,32 +28,42 @@ export default new Router({
 				{
 					path: '/button',
 					name: 'button',
-					component: button
+					component: Button
 				},
 				{
 					path: '/icon',
 					name: 'icon',
-					component: icon
+					component: Icon
 				},
 				{
 					path: '/input',
 					name: 'input',
-					component: input
+					component: Input
 				},
 				{
 					path: '/textarea',
 					name: 'textarea',
-					component: textarea
+					component: Textarea
 				},
 				{
 					path: '/radio',
 					name: 'radio',
-					component: radio
+					component: Radio
 				},
 				{
 					path: '/checkbox',
 					name: 'checkbox',
-					component: checkbox
+					component: Checkbox
+				},
+				{
+					path: '/select',
+					name: 'select',
+					component: Select
+				},
+				{
+					path: '/switch',
+					name: 'switch',
+					component: Switch
 				}
 			]
 		}

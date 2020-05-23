@@ -47,6 +47,8 @@
                         	{name: 'Radio', path: 'radio'},
                         	{name: 'Checkbox', path: 'checkbox'},
                         	{name: 'Textarea', path: 'textarea'},
+                        	{name: 'Select', path: 'select'},
+                        	{name: 'Switch', path: 'switch'},
                         ]
                     },
                     {

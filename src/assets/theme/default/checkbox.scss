@@ -1,6 +1,6 @@
 @import "../../css/mixin.scss";
 
-.k-radio {
+.k-checkbox {
   color: #606266;
   font-weight: 500;
   line-height: 1;
@@ -16,7 +16,7 @@
   -ms-user-select: none;
 }
 
-.k-radio--input {
+.k-checkbox--input {
   white-space: nowrap;
   cursor: pointer;
   outline: none;
@@ -24,63 +24,66 @@
   line-height: 1;
   position: relative;
   vertical-align: middle;
-  .k-radio--inner {
+  .k-checkbox--inner {
     border: 1px solid #dcdfe6;
-    border-radius: 100%;
     width: 14px;
     height: 14px;
     background-color: #fff;
     position: relative;
     cursor: pointer;
     display: inline-block;
+    z-index: 1;
     box-sizing: border-box;
     &:after {
-      width: 4px;
-      height: 4px;
-      border-radius: 100%;
-      background-color: #fff;
+      box-sizing: content-box;
       content: "";
+      border: 1px solid #fff;
+      border-left: 0;
+      border-top: 0;
+      height: 7px;
+      left: 4px;
       position: absolute;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%,-50%) scale(0);
-      transition: transform .15s ease-in;
+      top: 1px;
+      transform: rotate(45deg) scaleY(0);
+      width: 3px;
+      transition: transform .15s ease-in .05s;
+      transform-origin: center;
     }
   }
   &.is-checked {
-    .k-radio--inner {
+    .k-checkbox--inner {
       border-color: $theme-color;
       background: $theme-color;
       &:after {
-        transform: translate(-50%,-50%) scale(1);
+        transform: rotate(45deg) scaleY(1);
       }
     }
   }
   &.is-disabled {
-    .k-radio--inner {
+    .k-checkbox--inner {
       background-color: #f5f7fa;
       border-color: #e4e7ed;
       cursor: not-allowed;
     }
     &+span {
-      &.k-radio--label {
+      &.k-checkbox--label {
         color: #c0c4cc;
         cursor: not-allowed;
       }
     }
     &.is-checked {
-      .k-radio--inner {
+      .k-checkbox--inner {
         background-color: #f2f6fc;
         border-color: #dcdfe6;
         &:after {
-          background-color: #c0c4cc;
+          border-color: #c0c4cc;
         }
       }
     }
   }
 }
 
-.k-radio--label {
+.k-checkbox--label {
   font-size: 14px;
   padding-left: 10px;
   &.is-checked {
@@ -88,7 +91,7 @@
   }
 }
 
-.k-radio--original {
+.k-checkbox--original {
   opacity: 0;
   outline: none;
   position: absolute;

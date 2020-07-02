@@ -1,6 +1,6 @@
 # k-components
 
-#### 声明：本项目纯属学习使用，其中有借鉴 in2UI以及ElementUi等的思想，感谢GitHub广阔的资源空间。
+#### 说明：本项目纯属学习使用，其中有借鉴 in2UI以及ElementUi等的思想，感谢GitHub广阔的资源空间。
 
 ## Project setup
 ```

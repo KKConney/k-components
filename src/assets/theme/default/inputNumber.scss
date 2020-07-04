@@ -1,0 +1,69 @@
+@import "../../css/mixin.scss";
+
+.k-input-number {
+  position: relative;
+  display: inline-block;
+  width: 180px;
+  line-height: 38px;
+  .k-input-number--increase, .k-input-number--decrease {
+    position: absolute;
+    z-index: 1;
+    top: 1px;
+    width: 40px;
+    height: auto;
+    text-align: center;
+    background: #f5f7fa;
+    color: #606266;
+    cursor: pointer;
+    font-size: 18px;
+    &:hover {
+      color: $theme-color;
+    }
+  }
+  .k-input-number--increase {
+    right: 1px;
+    border-radius: 0 4px 4px 0;
+    border-left: 1px solid #dcdfe6;
+  }
+  .k-input-number--decrease {
+    left: 1px;
+    border-radius: 4px 0 0 4px;
+    border-right: 1px solid #dcdfe6;
+  }
+  .k-input-number--increase.is-disabled, .k-input-number--decrease.is-disabled {
+    color: #c0c4cc;
+    cursor: not-allowed;
+  }
+
+  .k-input {
+    display: block;
+  }
+  .k-input--inner {
+    -webkit-appearance: none;
+    padding-left: 50px;
+    padding-right: 50px;
+    text-align: center;
+  }
+  &:hover {
+    .k-input--inner {
+      border-color: $theme-color;
+    }
+  }
+  &.is-disabled {
+    .k-input-number--increase, .k-input-number--decrease {
+      border-color: #e4e7ed;
+      color: #e4e7ed;
+      cursor: not-allowed;
+    }
+    &:hover {
+      .k-input--inner {
+        border-color: #dcdfe6;
+      }
+    }
+  }
+  -moz-user-select:none;/*火狐*/
+  -webkit-user-select:none;/*webkit浏览器*/
+  -ms-user-select:none;/*IE10*/
+  -khtml-user-select:none;/*早期浏览器*/
+  user-select:none;
+}

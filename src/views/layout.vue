@@ -44,6 +44,7 @@
                     	title: 'Form 表单',
                         list: [
                         	{name: 'Input', path: 'input'},
+                        	{name: 'InputNumber', path: 'inputNumber'},
                         	{name: 'Radio', path: 'radio'},
                         	{name: 'Checkbox', path: 'checkbox'},
                         	{name: 'Textarea', path: 'textarea'},
